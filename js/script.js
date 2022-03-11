@@ -1,23 +1,34 @@
-const items = [
-    'img/01.jpg',
-    'img/02.jpg',
-    'img/03.jpg',
-    'img/04.jpg',
-    'img/05.jpg'
-];
 
-const title = [
-    'Svezia',
-    'Svizzera',
-    'Gran Bretagna',
-    'Germania',
-    'Paradise'
-]
+const app = new Vue ({
+    el: '#root',
+    data:{
+        arrData:[
+            {
+                countryName:'Svezia',
+                countryImg:'01.jpg',
+                countryText:'Lorem ipsum, dolor sit amet consectetuadipisicing elit. Et temporibus voluptatum suscipitempore aliquid deleniti aut veniam inventoreligendi ex ad ullam, cumque provident totam omnismagnam dolores dolorum corporis.',
+            },
+            {
+                countryName:'Svizzera',
+                countryImg:'02.jpg',
+                countryText:'Lorem ipsum'
+            },
+            {
+                countryName:'Gran Bretagna',
+                countryImg:'03.jpg',
+                countryText:'Lorem ipsum, dolor sit ameconsectetur        adipisicing elit.',
+            },
+            {
+                countryName:'Germania',
+                countryImg:'04.jpg',
+                countryText:'Lorem ipsum, dolor sit ameconsectetur        adipisicing elit. Et temporibuvoluptatum suscipit tempore     aliquid deleniti auveniam inventore eligendi ex ad ullam,',
+            },
+            {
+                countryName:'Paradise',
+                countryImg:'05.jpg',
+                countryText:'Et temporibus voluptatum suscipitempore      aliquid deleniti aut veniam inventoreligendi ex ad ullam,',
+            },
+        ]    
+    }
 
-const text = [
-    'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.',
-    'Lorem ipsum',
-    'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
-    'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
-    'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
-]
+});
