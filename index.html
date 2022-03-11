@@ -18,12 +18,11 @@
 					<p class="slide-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.</p>
 				</div>
 			</div>
-
 			<div class="thumbs">
-				<div class="thumb active">
+				<div v-for="(item, index) in arrData" class="thumb active">
 					<img src="img/01.jpg" alt="Svezia">
 				</div>
-				<div class="thumb">
+				<!-- <div class="thumb">
 					<img src="img/02.jpg" alt="Svizzera">
 				</div>
 				<div class="thumb">
@@ -34,14 +33,16 @@
 				</div>
 				<div class="thumb">
 					<img src="img/05.jpg" alt="Paradise">
-				</div>
+				</div> -->
 
-				<button class="btn-control btn-previus">&and;</button>
-				<button class="btn-control btn-next">&or;</button>
+				<button @click="down" class="btn-control btn-previus">&and;</button>
+				<button @click="up" class="btn-control btn-next">&or;</button>
 			</div>
 		</div>
-	</div>
+
 	
+	</div>
+
 	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 	<script src="js/script.js"></script>
 </body>
