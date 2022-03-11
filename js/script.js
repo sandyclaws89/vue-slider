@@ -13,6 +13,7 @@ const app = new Vue ({
     el: '#root',
     test: 3,
     data:{
+        activeIndex: 0,  
         arrData:[
             {
                 countryName:'Svezia',
@@ -40,12 +41,25 @@ const app = new Vue ({
                 countryText:'Et temporibus voluptatum suscipitempore      aliquid deleniti aut veniam inventoreligendi ex ad ullam,',
             },
         ], 
-
+  
+    },
+    methods:{
+        // activeFunction() {
         
-    },
-    methods: {
-        console.log(this.arrData);
-    },
+        // }
+        down(){
+            activeIndex++;
+        },
+        up(){
+            activeIndex--;
+        }
+    }
+    // created() {
+    //     console.log(this.arrData);
+    //   }
+    // methods: {
+    //     console.log(this.arrData);
+    // },
 });
 
 
