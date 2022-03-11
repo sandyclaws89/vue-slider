@@ -11,7 +11,6 @@ Buon lavoro e buon divertimento!*/
 
 const app = new Vue ({
     el: '#root',
-    test: 3,
     data:{
         activeIndex: 0,  
         arrData:[
@@ -28,7 +27,7 @@ const app = new Vue ({
             {
                 countryName:'Gran Bretagna',
                 countryImg:'03.jpg',
-                countryText:'Lorem ipsum, dolor sit ameconsectetur        adipisicing elit.',
+                countryText:'Lorem ipsum, dolor sit ameconsectetur adipisicing elit.',
             },
             {
                 countryName:'Germania',
@@ -44,22 +43,32 @@ const app = new Vue ({
   
     },
     methods:{
-        // activeFunction() {
-        
-        // }
+      
         down(){
-            activeIndex++;
+           
+            if(this.activeIndex<this.arrData.length -1){
+                this.activeIndex++;
+                console.log(this.activeIndex)
+
+            } else {
+                this.activeIndex = 0;
+                // console.log(this.activeIndex)
+            }
+          
+           
         },
         up(){
-            activeIndex--;
+            if(this.activeIndex <= 0){
+                this.activeIndex = this.arrData.length-1;
+                // console.log(this.activeIndex)
+            } else {
+                this.activeIndex--;
+                console.log(this.activeIndex)
+            }
+
         }
     }
-    // created() {
-    //     console.log(this.arrData);
-    //   }
-    // methods: {
-    //     console.log(this.arrData);
-    // },
+  
 });
 
 
