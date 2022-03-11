@@ -42,8 +42,16 @@ const app = new Vue ({
         ], 
   
     },
+    created() {
+        setInterval(indexChangeByTime, 1000),
+        function indexChangeByTime(){
+           this.activeIndex++
+            console.log(this.activeIndex)}
+        },
     methods:{
       
+       
+
         down(){
            
             if(this.activeIndex<this.arrData.length -1){
@@ -66,7 +74,8 @@ const app = new Vue ({
                 console.log(this.activeIndex)
             }
 
-        }
+        },
+       
     }
   
 });
